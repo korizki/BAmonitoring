@@ -1,0 +1,274 @@
+    @media screen and (max-width:480px){
+    *{
+      margin: 0;
+      padding: 0;
+      font-size: 11px;
+    }
+    /* Halaman Index */
+    .navicon{
+      margin: 15px;
+    }
+    .navbar{
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 100%;
+      padding: 0;
+    }
+    .navbar ul{
+      flex-direction: column;
+      text-align: center;
+      display: none;
+    }
+    .navbar ul li{
+      border: 1px solid rgba(102, 102, 102, 0.09);
+    }
+    .top-right{
+      margin-top: 50px;
+      z-index: 2;
+    }
+    header{
+      padding-left: 10%;
+      padding-right: 10%;
+      flex-direction: column;
+      height: 900px;
+      justify-content: flex-start;
+    }
+    header h1{
+      font-size: 3.8em;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .top-right > div > p{
+      text-align: center;
+    }
+    .startBtn{
+      margin-top: 50px;
+      width: 100%;
+      text-align: center;
+    }
+    header img{
+      z-index: 1;
+      width: 100%;
+      margin-top: 30px;
+    }
+    .flex{
+      flex-direction: column;
+    }
+    .sectionbox{
+      padding: 20px 10%;
+      width: 100%;
+      text-align: center;
+    }
+    .sectionbox h1{
+      margin: 20px 0;
+    }
+    .content1 p{
+      padding: 0 20%;
+      padding-bottom: 20px;
+      margin-top: 0;
+      width: 100%;
+      text-align: center;
+    }
+    .con2{
+      margin-bottom: 0px;
+    }
+    .con2 img{
+      margin-left: 10%;
+      width: 80%;
+    }
+    .con2-caption{
+      width: 100%;
+    }
+    .datebutton{
+      margin-bottom: 20px;
+      padding: 5px 10px;
+    }
+    .datebutton p label{
+      margin-right: 3px;
+    }
+    .datebutton p input{
+      width: 75px;
+      margin-right: 5px;
+    }
+    .btnsubmit{
+      width: 80px !important;
+      padding: 9px 0px;
+    }
+    /* Halaman Elektrifikasi */
+    .header{
+      margin: 0;
+      padding: 20px 20px;
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      overflow: auto hidden;
+      justify-content: flex-start;
+      gap: 20px;
+    }
+    .top-title{
+      font-size: 27px;
+      margin: 20px 20px;
+    }
+    .periodeButton{
+      width: 80%;
+      margin: 0;
+      top: 20px;
+
+    }
+    .editBtn{
+      width: 45px;
+      top: 30px;
+      display: none;
+    }
+    .listMonth{
+        margin: 8px 0px 13px 0px;
+        padding: 5px;
+        width: 100%;
+    }
+    .header-illustration{
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .graph-box{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .top-title{
+        font-size: 1.5em;
+    }
+    .btnsubmit{
+        width: 100%;
+    }
+    .probDetailContent{
+      flex-direction: column;
+    }
+    .probDetailContent h1{
+      font-size: 50px;
+      margin-bottom: 0px;
+    }
+    .probDetailContent p{
+      margin-bottom: 25px;
+      color: white;
+    }
+    .header-illustration p{
+      margin-top: 20px;
+      font-size: 1em;
+      line-height: 1.8;
+    }
+    .outer-box{
+      padding: 5% 5%;
+    }
+    #tabel-problem{
+      font-size: 10px;
+    }
+    .timesheet{
+      display: block;
+      margin: 30px 0;
+    }
+    .timesheet .graph-timesheet{
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 30px;
+      height: 200px;
+    }
+    .timesheet-info{
+      width: 100%;
+    }
+    .hide{
+      display: none;
+    }
+    .tabel_problem{
+      padding: 20px 5%;
+    }
+    .tabel_problem table{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+    .tabel_problem table tr td{
+      margin: 20px;
+    }
+    .unit{
+        width: 100%;
+    }
+    .frame{
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        gap: 25px;
+    }
+    .second{
+      width: 90%;
+      margin: 0 5%;
+    }
+    
+    footer{
+      font-size: 2em;
+      flex-direction: column;
+      padding: 20px;
+      padding-top: 50px;
+      text-align: center;
+      border-top: 1px solid rgba(128, 128, 128, 0.241);
+    }
+    footer section{
+        margin-bottom: 20px;
+    }
+    .corpInfo h1{
+      font-size: 1.5em;
+    }
+    .corpInfo p{
+      font-size: 1.3em;
+    }
+    .sosmed{
+        width: 30%;
+        margin: 10px 35%;
+        padding: 8px 15px;
+    }
+    .mainIllus figure{
+        flex-direction: column;
+    }
+    .mainIllus figure img{
+        width: 100%;
+        margin-top: 60px;
+    }
+    .mainIllus figure div{
+        width: 100%;
+    }
+    .mainIllus figure div h1{
+        margin: 10px;
+        font-size: 2em;
+    }
+    .mainIllus figure div p{
+        margin: 10px;
+        font-size: 1em;
+        text-align: justify;
+    }
+    .unitBox{
+      flex-direction: column;
+      margin: 0;
+      margin-bottom: 30px;
+    }
+    .unitItemBox{
+      margin: 20px 30px;
+      padding: 10px;
+    }
+    .unitItemBox img{
+      width: 120px;
+      margin-top: 10px;
+    }
+    .status p{
+      font-size: 3em;
+      margin-bottom: 0;
+    }
+    .status h2{
+      margin-bottom: 4px;
+    }
+    .unitItemBox img{
+      width: 80px;
+    }
+    .status{
+      padding: 5px 15px;
+    }
+  }
