@@ -1,12 +1,13 @@
+<!-- session login -->
 <header>
   <div class='top-right'>
     <div>
-      <h1 >Monitoring Activities will be Easier, </h1>
-      <p>We provide a service to help you choose your best plans. With graph's, all data are easier to understand.  </p>
-      <a href='#data' class='startBtn'>Get Started <i class='fa fa-chevron-right' style='margin-left: 5px;'></i></a>
+      <h1>Monitoring Activities will be Easier, </h1>
+      <p>We provide a service to help you choose your best plans. With graph's, all data are easier to understand.</p>
+      <a href='#data' class='startBtn'>Get Started <i style='margin-left: 5px; color: inherit;' class="fa fa-lg fa-angle-right " ></i></a>
     </div>
   </div>
-  <img alt='gambar illustrasi' src='assets/illusmins.png' style='auto;' >
+  <img alt='gambar illustrasi' src='assets/illusmins.svg' >
 </header>
 <section class='sectionbox' id='benefit'>
   <h1>Benefit from Us</h1>
@@ -21,7 +22,7 @@
     </div>
     <div class='content1'>
       <img src='assets/time.png'>
-      <p>Our service will serve you in 24/7 hour's. Just make a ticket, and we'll help you. </p>
+      <p>Our service will serve you in 24/7 hour's. Submit a ticket, and we'll help you soon. </p>
     </div>
   </div>
 </section>
@@ -39,7 +40,7 @@
               <input class='listMonth' name='tawal' id='tawal' type='date' value='<?php echo $tawal?>' ></input>
               <label for='takhir'>End</label> 
               <input class='listMonth' name='takhir' id='takhir' type='date' value='<?php echo $takhir?>'></input>
-              <input type='submit' name='filterdata' value='Get Data' class='btnsubmit'></input></p>
+              <input type='submit' name='filterdata' value='Get Data' class='btnsubmit getdata'></input></p>
           </div>
         </form>
       </div>
@@ -57,7 +58,7 @@
               <input class='listMonth' name='tawal' id='tawal' type='date' value='<?php echo $tawal?>' ></input>
               <label for='takhir'>End</label> 
               <input class='listMonth' name='takhir' id='takhir' type='date' value='<?php echo $takhir?>'></input>
-              <input type='submit' name='filterdata' value='Get Data' class='btnsubmit'></input></p>
+              <input type='submit' name='filterdata' value='Get Data' class='btnsubmit getdata'></input></p>
           </div>
         </form>
       </div>
@@ -66,7 +67,25 @@
   </div>
 </section>
 
-
-<script>
-  
-</script>
+<section id='loginForm'>
+  <div class='loginBox'>
+    <div class='loginForm'>
+      <div class='loginIllus'>
+        <img src='assets/login.svg' alt='IllustrationLogin'>
+        
+      </div>
+      <div class='inputArea'>
+        <p style='margin-bottom: 5px;'>Log In, <p>
+        <h1>Welcome Back</h1>
+        <form action='phpcode/login.php' method='post'style="color: #30475e">
+          <i class='fa fa-lg fa-user' style="margin-top: 11px; margin-left: 12px; position: absolute;"></i> <input autocomplete='off' placeholder='Username' type='text' name='username' id='username'>
+          <i class='fa fa-lg fa-key' style="margin-top: 11px; margin-left: 12px; position: absolute;" ></i> <input placeholder='Password' type='password' name='password' id='password'>
+          <input class='loginsubmit' type='submit' value='Log In' name='submit'>
+        </form>
+        <input class='loginsubmit cancel' type='submit' value='Cancel' onClick='hideLogin()'>
+        <p style='text-align: center; margin-top: 30px; font-style: italic;'>Contact your Admin to get an access or forgot password.</p>
+      </div>
+      
+    </div>
+  </div>
+</section>

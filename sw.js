@@ -1,11 +1,12 @@
-// importScripts('/cache-polyfill.js');
+importScripts('/cache-polyfill.js');
 
 self.addEventListener('install', function(e){
     e.waitUntil(caches.open('PTBA-v1').then(function(cache){
         return cache.addAll([
             '/',
-            'ptba.php',
+            'index.php',
             'logo1.png',
+            'icon.png',
             '../assets/cru.webp',
             '../assets/illus.webp',
             '../assets/illus2.webp',

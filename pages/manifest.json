@@ -2,11 +2,12 @@
   "name": "Bukit Asam Performance Monitoring",
   "short_name": "BA Monitoring",
   "theme_color": "#0c2e49",
+  "id" : "/grafikweb/pages/index.php",
   "background_color": "#244762",
   "display": "fullscreen",
   "orientation": "portrait",
   "scope": "/",
-  "start_url": "ptba.php",
+  "start_url": "index.php",
   "icons": [
     {
       "src": "icons/logo192.png",

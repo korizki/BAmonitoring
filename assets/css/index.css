@@ -34,7 +34,7 @@ ul a{
     line-height: 35px;
 }
 ul a:hover{
-    background: #413b850e
+    background: #18255527
 }
 nav ul li{
     list-style: none;
@@ -53,11 +53,11 @@ header{
     padding: 0 5%;
     padding-top: 50px;
     height: 800px;
-
+    gap: 30px;
 }
 header img{
     object-fit: cover;
-    width: 700px;
+    width: 50%;
     margin-right: 20px
 }
 header h1{
@@ -101,7 +101,7 @@ header p{
 }
 .startBtn{
     display: block;
-    width: 170px;
+    width: 175px;
     margin-top: 50px;
     padding: 15px 30px;
     background: #31315e;
@@ -174,4 +174,139 @@ header p{
     font-size: 1.15em;
     line-height: 1.8;
     text-align: justify;
+}
+
+.loginBox{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    top: 0;
+    z-index: 100;
+    background:rgba(17, 17, 17, 0.693);
+    transition: ease-in 1s;
+}
+.loginForm{
+    background: rgb(255, 255, 255);
+    margin: 8% 20%;
+    height: 450px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    border: 5px solid white;
+}
+
+.loginIllus img{
+    width: 360px;
+    height: 80%;
+    object-fit: cover;
+}
+.inputArea input{
+    display: block;
+    margin: 15px 0px;
+    padding: 12px 15px;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid rgba(22, 32, 75, 0.131);
+    padding-left: 40px;
+}
+.inputArea input:focus{
+    outline: none;
+    border: 1px solid rgba(3, 42, 97, 0.871);
+}
+.inputArea h1{
+    font-size: 2.5em;
+    font-weight: 600;
+    padding-bottom: 10px;
+    color: #30475E;
+    margin-top: 10px;
+}
+.loginsubmit{
+    background: #413b85;
+    color: white;
+    cursor: pointer;
+    padding-left: 15px !important;
+}
+.cancel{
+    background: transparent;
+    border: none !important;
+    outline: none;
+    padding: 0 !important;
+}
+.cancel:hover, .cancel:focus{
+    box-shadow: none !important;
+    text-decoration: underline !important;
+}
+.loginsubmit:hover, .loginsubmit:focus{
+    box-shadow: 0 0px 15px 0 #413b85bf;
+}
+.loginIllus{
+    border-radius: 17px;
+}
+.usericon{
+    position: absolute;
+    margin-top: 11px;
+    margin-left: 12px;
+}
+.pw{
+    margin-top: 11px;
+    margin-left: 12px;
+}
+
+#dataSummary{
+    display: block;
+    margin-left: 215px;
+    margin-right: 15px;
+}
+.contProblemNav{
+    padding: 20px;
+    gap: 15px;
+    display: flex;
+    color: rgb(58, 58, 58);
+}
+.searchInput{
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 7px;
+    width: 500px;
+    margin: 0 15px;
+}
+.searchInput:focus{
+    outline: none;
+}
+.searchbtn{
+    display: inline-block;
+    background: #fafafa;
+    padding: 11px;
+    color: #30475e;
+    border-radius: 7px; 
+    border: 1px solid rgb(223, 223, 223);
+}
+.searchbtn:hover{
+    box-shadow: 0 5px 10px #d3d3d3a8;
+}
+.filterMenu{
+    position: absolute;
+    background: #ffffff;
+    color: #30475e;
+    width: 150px;
+    padding-top: 10px;
+    display: none;
+}
+.filterMenu ul li{
+    list-style: none;
+    border: 1px solid rgb(228, 228, 228);
+}
+.filterMenu ul li a{
+    display: block;
+    width: 100%;
+    padding: 4px 20px;
+}
+.filterMenu ul li a:hover{
+    background-color: #cacaca6e;
 }

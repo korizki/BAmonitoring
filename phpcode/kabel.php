@@ -79,6 +79,8 @@
     $data3005 = mysqli_query($hostptba, "select SUM(PANJANG) as SE3005 from T_KABEL where SHOVEL = 'SE-3005'");
     $data3006 = mysqli_query($hostptba, "select SUM(PANJANG) as SE3006 from T_KABEL where SHOVEL = 'SE-3006'");
     $data3007 = mysqli_query($hostptba, "select SUM(PANJANG) as SE3007 from T_KABEL where SHOVEL = 'SE-3007'");
+    $dataall = mysqli_query($hostptba, "select SUM(PANJANG) as SUMALL from T_KABEL");
+
     $totalSE3001 = mysqli_fetch_array($data3001)['SE3001'];
     $totalSE3002 = mysqli_fetch_array($data3002)['SE3002'];
     $totalSE3003 = mysqli_fetch_array($data3003)['SE3003'];
@@ -86,6 +88,8 @@
     $totalSE3005 = mysqli_fetch_array($data3005)['SE3005'];
     $totalSE3006 = mysqli_fetch_array($data3006)['SE3006'];
     $totalSE3007 = mysqli_fetch_array($data3007)['SE3007'];
+    $totalall = mysqli_fetch_array($dataall)['SUMALL'];
+    
     $arr = array($totalSE3001, $totalSE3002, $totalSE3003, $totalSE3004, $totalSE3005, $totalSE3006, $totalSE3007);
     $max = max($arr);
     if ($max == $totalSE3001){
@@ -129,4 +133,10 @@
     $tsustandby = mysqli_fetch_array($data_tsu_standby)['TSUSTANDBY'];
     $tsubreakdown = mysqli_fetch_array($data_tsu_breakdown)['TSUBREAKDOWN'];
 
+    $dataallready = mysqli_query($hostptba, "select COUNT(NAMA_UNIT) as 'ALLREADY' from T_UNIT where KONDISI = 'Ready'");
+    $dataallbreakdown = mysqli_query($hostptba, "select COUNT(NAMA_UNIT) as 'ALLBREAKDOWN' from T_UNIT where KONDISI = 'Breakdown'");
+    $dataallstandby = mysqli_query($hostptba, "select COUNT(NAMA_UNIT) as 'ALLSTANDBY' from T_UNIT where KONDISI = 'Standby'");
+    $readyunit = mysqli_fetch_array($dataallready)['ALLREADY'];
+    $breakdownunit = mysqli_fetch_array($dataallbreakdown)['ALLBREAKDOWN'];
+    $standbyunit = mysqli_fetch_array($dataallstandby)['ALLSTANDBY'];
 ?>

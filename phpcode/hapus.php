@@ -1,4 +1,7 @@
 <?php
-    echo 'anda beradea di halaman hapus ';
+    include 'connection.php';
+    $id = $_GET['id'];
+    $query = mysqli_query($hostptba, "DELETE FROM T_HALANGAN WHERE ID = '$id' ");
+    header("location:../pages/data.php?content=problemdelete");
 
 ?>

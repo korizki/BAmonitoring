@@ -47,7 +47,18 @@ function showDetailUnit(){
     labelUnit.innerHTML = 'Show';
   }
 }
-
+// menampilkan detail kabel
+function showDetailKabel(){
+  const detailKabel = document.getElementById('list-kabel');
+  const labelKabel = document.getElementById('actionKabel');
+  if (labelKabel.innerHTML == 'Show'){
+    labelKabel.innerHTML = 'Hide';
+    detailKabel.style.display = 'block';
+  } else {
+    labelKabel.innerHTML = 'Show';
+    detailKabel.style.display = 'none';
+  }
+}
 // Menampilkan single line diagram
   var count = 0;
   function showSingleLine(){
@@ -77,19 +88,57 @@ function showDetailUnit(){
       document.querySelector('.link2').style.color = 'white';
       document.querySelector('.link3').style.color = 'white';
       document.querySelector('.link4').style.color = 'white';
-      
+    }
+  }
+// hide show edit btn menu
+  
+  document.getElementById('pageListrik').onscroll = function(event){
+    hideshowfunction()
+  }
+  function hideshowfunction(){
+    if (document.documentElement.scrollTop > 50){
+      document.getElementById('editBtn').style.transform = 'translate(-75px, 30px)'
+    } else {
+      document.getElementById('editBtn').style.transform = 'translate(-150px, 30px)'
     }
   }
 // Menampilkan edit tanggal
 var btn = document.getElementById('editBtn');
-btn.value = 0;    
+btn = 0;    
 function showEditDate(){
   const menu = document.getElementById('editMenu');
-  if (btn.value == 0){
+  if (btn == 0){
     menu.style.transform = 'translateX(0)';
-    btn.value = 1;
+    btn = 1;
   } else {
     menu.style.transform = 'translateX(-900px)';
-    btn.value = 0;
+    btn = 0;
   }
+}
+//hide login form 
+  function hideLogin(){
+    const area = document.querySelector('.loginBox');
+    area.style.display = 'none';
+  }
+  function showLogin(){
+    console.log('Timbul')
+    const area = document.querySelector('.loginBox');
+    area.style.display = 'block';
+    document.getElementById('username').focus();
+  }
+
+// Show Filter Menu
+function showFilterMenu(){
+  const filterMenu = document.querySelector(".filterMenu");
+  if (filterMenu.style.display == "none"){
+    filterMenu.style.display = "block";
+  } else if(filterMenu.style.display == "block"){
+    filterMenu.style.display = "none";
+  } else {
+    filterMenu.style.display = "block";
+  }
+}
+
+function sortProblemData(){
+  document.querySelector("#load").click();
 }

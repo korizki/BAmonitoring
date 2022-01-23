@@ -1,20 +1,22 @@
 <?php
     include 'connection.php';
-    $id = $_GET['id'];
-    $data = mysqli_query($hostptba, "select * from T_HALANGAN where id='$id'");
-	while($tabel = mysqli_fetch_array($data)){
-		?>
-		<form method="post" action="update.php">
-			<table>
-				<tr>			
-					<td>Nama</td>
-					<td>
-						<input type="text" name="id" value="<?php echo $tabel['ID']; ?>">
-					</td>
-				</tr>
-			</table>
-		</form>
-		<?php 
-	}
+	$id = $_POST['id'];
+	$power = $_POST['power'];
+	$unit = $_POST['unit'];
+	$lokasi = $_POST['lokasi'];
+	$grup = $_POST['grup'];
+	$start = $_POST['start-time'];
+	$end = $_POST['end-time'];
+	$durasi = $_POST['durasi'];
+	$problem = $_POST['problem'];
+	$action = $_POST['action'];
+
+	$oke = mysqli_query($hostptba, "update T_HALANGAN set 
+	power = '$power',
+	unit = '$unit', lokasi = '$lokasi', grup = '$grup', 
+	start = '$start', end = '$end', total = '$durasi',
+	problem = '$problem', action_problem = '$action' where id='$id'");
+
+	header("location: ../pages/data.php?content=problemedit")
 
 ?>

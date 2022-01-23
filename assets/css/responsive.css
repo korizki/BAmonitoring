@@ -1,13 +1,22 @@
-    @media screen and (max-width:480px){
+    @media screen and (max-width: 1980px){
+      .illusbig{
+        width: 10%;
+      }
+    }
+    @media screen and (max-width: 1280px){
+
+    }
+    @media screen and (max-width:425px){
     *{
       margin: 0;
       padding: 0;
-      font-size: 11px;
+      font-size: 14px;
     }
     /* Halaman Index */
     .navicon{
       margin: 15px;
     }
+    
     .navbar{
       flex-direction: column;
       justify-content: flex-start;
@@ -30,7 +39,7 @@
       padding-left: 10%;
       padding-right: 10%;
       flex-direction: column;
-      height: 900px;
+      height: 950px;
       justify-content: flex-start;
     }
     header h1{
@@ -81,53 +90,58 @@
     }
     .datebutton{
       margin-bottom: 20px;
-      padding: 5px 10px;
+      padding: 20px;
     }
     .datebutton p label{
       margin-right: 3px;
+      margin-bottom: 5px;
     }
     .datebutton p input{
-      width: 75px;
-      margin-right: 5px;
+      width: 100%;
+      margin: 0;
     }
+    
     .btnsubmit{
-      width: 80px !important;
       padding: 9px 0px;
     }
     /* Halaman Elektrifikasi */
     .header{
       margin: 0;
       padding: 20px 20px;
-      margin-top: 20px;
       width: 100%;
       display: flex;
-      overflow: auto hidden;
+      flex-direction: column;
+      overflow: none hidden;
       justify-content: flex-start;
-      gap: 20px;
     }
     .top-title{
       font-size: 27px;
       margin: 20px 20px;
     }
     .periodeButton{
-      width: 80%;
+      width: 60%;
+      padding: 15px;
       margin: 0;
-      top: 20px;
-
+      top: 15px;
+    }
+    .block{
+      display: block;
     }
     .editBtn{
-      width: 45px;
-      top: 30px;
-      display: none;
+      width: 52px;
+      top: -10px;
+      /* display: none; */
     }
     .listMonth{
         margin: 8px 0px 13px 0px;
         padding: 5px;
-        width: 100%;
+        margin-bottom: 15px !important;
     }
     .header-illustration{
         width: 100%;
         border-radius: 10px;
+        margin: 0;
+        margin-bottom: 20px;
     }
 
     .graph-box{
@@ -144,18 +158,25 @@
     .probDetailContent{
       flex-direction: column;
     }
+    .probdetailsum h2{
+    color: white;
+    font-size: 1.4rem;
+    text-align: center;
+    }
     .probDetailContent h1{
       font-size: 50px;
       margin-bottom: 0px;
     }
-    .probDetailContent p{
+    .probdetailsum{
+      margin: 15px;
+    }
+    .probDetailContent > p{
       margin-bottom: 25px;
-      color: white;
+      /* color: white; */
     }
     .header-illustration p{
-      margin-top: 20px;
+      margin-top: 15px;
       font-size: 1em;
-      line-height: 1.8;
     }
     .outer-box{
       padding: 5% 5%;
@@ -219,12 +240,12 @@
       font-size: 1.5em;
     }
     .corpInfo p{
-      font-size: 1.3em;
+      font-size: 1em;
     }
     .sosmed{
-        width: 30%;
-        margin: 10px 35%;
-        padding: 8px 15px;
+        width: 80%;
+        margin: 10px 10%;
+        padding: 12px 15px;
     }
     .mainIllus figure{
         flex-direction: column;
@@ -248,15 +269,14 @@
     .unitBox{
       flex-direction: column;
       margin: 0;
-      margin-bottom: 30px;
     }
     .unitItemBox{
-      margin: 20px 30px;
+      margin: 20px 0px;
       padding: 10px;
     }
     .unitItemBox img{
-      width: 120px;
-      margin-top: 10px;
+      width: 75px;
+      height: auto
     }
     .status p{
       font-size: 3em;
@@ -265,10 +285,29 @@
     .status h2{
       margin-bottom: 4px;
     }
-    .unitItemBox img{
-      width: 80px;
-    }
     .status{
       padding: 5px 15px;
     }
+    .datakabel{
+      padding: 0;
+    }
+    .iconedit{
+      margin-left: -6px;
+    }
+    .datebutton p .getdata{
+      margin-top: 20px;
+    }
+  }
+  @media screen and (max-width: 375px){
+    .unitItemBox{
+      margin: 15px 5px;
+    }
+    .unitItemBox img{
+      width: 50px;
+      height: auto
+    }
+    .unitBox{
+      padding-top: 0px;
+    }
+    
   }
