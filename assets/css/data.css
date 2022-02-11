@@ -164,10 +164,11 @@ aside h1{
     color: rgb(31, 65, 87);
     padding: 20px;
     cursor: pointer;
+    transition: all 0.2s ease-in-out
 }
 .sideMenu:hover{
-    background:rgba(17, 45, 72, 0.789);
-    color: white;
+    background:rgba(199, 199, 199, 0.542);
+    /* color: white; */
 }
 .btnfilter{
     background: white;

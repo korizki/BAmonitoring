@@ -1,39 +1,39 @@
 <?php
 // Data Pemakaian Kabel
-    $kabel13001 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3001' and KABEL = 'Kabel 3 x 35mm2'");
-    $kabel23001 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3001' and KABEL = 'Kabel 3 x 50mm2'");
-    $kabel33001 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3001' and KABEL = 'Kabel 3 x 70mm2'");
-    $kabel43001 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3001' and KABEL = 'Kabel 3 x 95mm2'");
+    $kabel13001 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3001' and KABEL = 'Kabel 3 x 35mm2'");
+    $kabel23001 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3001' and KABEL = 'Kabel 3 x 50mm2'");
+    $kabel33001 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3001' and KABEL = 'Kabel 3 x 70mm2'");
+    $kabel43001 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3001' and KABEL = 'Kabel 3 x 95mm2'");
 
-    $kabel13002 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3002' and KABEL = 'Kabel 3 x 35mm2'");
-    $kabel23002 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3002' and KABEL = 'Kabel 3 x 50mm2'");
-    $kabel33002 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3002' and KABEL = 'Kabel 3 x 70mm2'");
-    $kabel43002 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3002' and KABEL = 'Kabel 3 x 95mm2'");
+    $kabel13002 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3002' and KABEL = 'Kabel 3 x 35mm2'");
+    $kabel23002 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3002' and KABEL = 'Kabel 3 x 50mm2'");
+    $kabel33002 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3002' and KABEL = 'Kabel 3 x 70mm2'");
+    $kabel43002 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3002' and KABEL = 'Kabel 3 x 95mm2'");
 
-    $kabel13003 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3003' and KABEL = 'Kabel 3 x 35mm2'");
-    $kabel23003 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3003' and KABEL = 'Kabel 3 x 50mm2'");
-    $kabel33003 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3003' and KABEL = 'Kabel 3 x 70mm2'");
-    $kabel43003 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3003' and KABEL = 'Kabel 3 x 95mm2'");
+    $kabel13003 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3003' and KABEL = 'Kabel 3 x 35mm2'");
+    $kabel23003 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3003' and KABEL = 'Kabel 3 x 50mm2'");
+    $kabel33003 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3003' and KABEL = 'Kabel 3 x 70mm2'");
+    $kabel43003 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3003' and KABEL = 'Kabel 3 x 95mm2'");
 
-    $kabel13004 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3004' and KABEL = 'Kabel 3 x 35mm2'");
-    $kabel23004 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3004' and KABEL = 'Kabel 3 x 50mm2'");
-    $kabel33004 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3004' and KABEL = 'Kabel 3 x 70mm2'");
-    $kabel43004 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3004' and KABEL = 'Kabel 3 x 95mm2'");
+    $kabel13004 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3004' and KABEL = 'Kabel 3 x 35mm2'");
+    $kabel23004 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3004' and KABEL = 'Kabel 3 x 50mm2'");
+    $kabel33004 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3004' and KABEL = 'Kabel 3 x 70mm2'");
+    $kabel43004 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3004' and KABEL = 'Kabel 3 x 95mm2'");
 
-    $kabel13005 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3005' and KABEL = 'Kabel 3 x 35mm2'");
-    $kabel23005 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3005' and KABEL = 'Kabel 3 x 50mm2'");
-    $kabel33005 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3005' and KABEL = 'Kabel 3 x 70mm2'");
-    $kabel43005 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3005' and KABEL = 'Kabel 3 x 95mm2'");
+    $kabel13005 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3005' and KABEL = 'Kabel 3 x 35mm2'");
+    $kabel23005 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3005' and KABEL = 'Kabel 3 x 50mm2'");
+    $kabel33005 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3005' and KABEL = 'Kabel 3 x 70mm2'");
+    $kabel43005 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3005' and KABEL = 'Kabel 3 x 95mm2'");
 
-    $kabel13006 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3006' and KABEL = 'Kabel 3 x 35mm2'");
-    $kabel23006 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3006' and KABEL = 'Kabel 3 x 50mm2'");
-    $kabel33006 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3006' and KABEL = 'Kabel 3 x 70mm2'");
-    $kabel43006 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3006' and KABEL = 'Kabel 3 x 95mm2'");
+    $kabel13006 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3006' and KABEL = 'Kabel 3 x 35mm2'");
+    $kabel23006 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3006' and KABEL = 'Kabel 3 x 50mm2'");
+    $kabel33006 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3006' and KABEL = 'Kabel 3 x 70mm2'");
+    $kabel43006 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3006' and KABEL = 'Kabel 3 x 95mm2'");
 
-    $kabel13007 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3007' and KABEL = 'Kabel 3 x 35mm2'");
-    $kabel23007 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3007' and KABEL = 'Kabel 3 x 50mm2'");
-    $kabel33007 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3007' and KABEL = 'Kabel 3 x 70mm2'");
-    $kabel43007 = mysqli_query($hostptba, "select PANJANG from T_KABEL where SHOVEL = 'SE-3007' and KABEL = 'Kabel 3 x 95mm2'");
+    $kabel13007 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3007' and KABEL = 'Kabel 3 x 35mm2'");
+    $kabel23007 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3007' and KABEL = 'Kabel 3 x 50mm2'");
+    $kabel33007 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3007' and KABEL = 'Kabel 3 x 70mm2'");
+    $kabel43007 = mysqli_query($hostptba, "select SUM(PANJANG) as PANJANG from T_KABEL where SHOVEL = 'SE-3007' and KABEL = 'Kabel 3 x 95mm2'");
 
 
     $pjgkabel13001 = mysqli_fetch_array($kabel13001)['PANJANG'];

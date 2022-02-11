@@ -644,7 +644,7 @@
     margin-right: 8px;
   }
   .dpContainer{
-    padding: 40px;
+    padding: 20px 40px;
     color: #30475e;
     background-image: url('../wave-haikei.svg');
     background-position: bottom 30% left;
@@ -719,7 +719,7 @@
     text-align: center;
   }
   .cContent h1{
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-top: 10px;
     font-weight: 800;
     color: #30475e;

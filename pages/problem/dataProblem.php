@@ -87,9 +87,9 @@
                     <td><?php echo $tabel['TOTAL'] ?></td>
                     <td class='hide'><?php echo $tabel['PROBLEM'] ?></td>
                     <td class='hide'><?php echo $tabel['ACTION_PROBLEM'] ?></td>
-                    <td><a href='../../phpcode/update.php?id=<?php echo $tabel['ID']; ?>'><img title='Edit' class='dataact' src='../assets/edit.svg' ></a>
+                    <td><a href='../phpcode/update.php?id=<?php echo $tabel['ID']; ?>'><img title='Edit' class='dataact' src='../assets/edit.svg' ></a>
                     
-                    <a href="../../phpcode/hapus.php?id=<?php 
+                    <a href="../phpcode/hapus.php?id=<?php 
                       echo $tabel['ID'];
                     ?>" > 
                     <img title='Delete' onClick="return confirm('Are you sure delete the data?')" class='dataact' src='../assets/trash.svg'></a>
