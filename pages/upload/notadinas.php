@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List Of Manual Book</title>
+    <title>List Of Nota Dinas</title>
     <link rel='icon' href='../../icon.png'>
     <link rel='stylesheet' href='../../assets/css/index.css'>
     <link rel='stylesheet' href='../../assets/css/styles.css'>
@@ -23,17 +23,17 @@
     
     ?>
     <header style="background: none" class="uploadPage">
-        <div class="upHeader">
+        <div class="upHeader notadinas">
             <figure>
-                <img src="../../assets/manualbook.svg" alt="illustration">
+                <img src="../../assets/notadinas.svg" alt="illustration">
             </figure>
             <div class="textHeader">
-                <h1>Manual Book</h1>
-                <p>This page contains collection of Manual Book. You can Upload and Download all of document's. Wanna see other document's? Click on button bellow.</p>
+                <h1>Nota Dinas</h1>
+                <p>This page contains collection of Nota Dinas. You can Upload and Download all of document's. Wanna see other document's? Click on button bellow.</p>
                 <div class="listButtons">
-                    <a href="notadinas.php"><i class="fa fa-file"></i>Nota Dinas</a>
-                    <a href="singlelinediagram.php"><i class="fa fa-file-signature"></i>Single Line Diagram</a>
                     <a href="bak.php"><i class="fa fa-file-medical"></i>Berita Acara Kejadian</a>
+                    <a href="manualbook.php"><i class="fa fa-file"></i>Manual Book</a>
+                    <a href="singlelinediagram.php"><i class="fa fa-file-signature"></i>Single Line Diagram</a>
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@
                     <?php 
                         include "../../phpcode/connection.php";
                         $no = 1;
-                        $query = mysqli_query($hostptba, "SELECT * FROM t_file WHERE DOC_TYPE='Manual Book' ");
+                        $query = mysqli_query($hostptba, "SELECT * FROM t_file WHERE DOC_TYPE='Nota Dinas' ");
                         while ($row = mysqli_fetch_array($query)){
                             ?>
                             <tr>
@@ -84,8 +84,8 @@
             <form class="form" action="../../phpcode/upload.php" method="post" enctype="multipart/form-data">
                 <label for="namadokumen">Select Document Type </label>
                 <select id="doctype" name="doctype">
-                    <option value="Nota Dinas">Nota Dinas</option>
-                    <option value="Manual Book" selected>Manual Book</option>
+                    <option value="Nota Dinas" selected>Nota Dinas</option>
+                    <option value="Manual Book">Manual Book</option>
                     <option value="Berita Acara Kejadian">Berita Acara Kejadian</option>
                     <option value="Single Line Diagram">Single Line Diagram</option>
                     <option value="Other Document">Other Document</option>

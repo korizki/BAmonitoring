@@ -14,20 +14,28 @@ if(isset($_POST["upload"])){
         header("Location: ../pages/upload/manualbook.php?status_upload=gagal");
     } else {
         // menyalin file ke director tujuan
-        // if(move_uploaded_file($_FILES["uploadBtn"]["tmp_name"], $target_file)){
-        //     echo "File ".htmlspecialchars(basename($_FILES["uploadBtn"]["name"]))." has been uploaded.";
-        // }
+        if(move_uploaded_file($_FILES["uploadBtn"]["tmp_name"], $target_file)){
+            echo "File ".htmlspecialchars(basename($_FILES["uploadBtn"]["name"]))." has been uploaded.";
+        }
         // // ambil nama file
-        // $fileName = $_FILES["uploadBtn"]["name"];
-        // $doc_type = $_POST['doctype'];
-        // $user = "Administrator";
-        // $doc_type = "Nota Dinas";
-        // $date = date("Y-m-d");
+        $fileName = $_FILES["uploadBtn"]["name"];
+        $doc_type = $_POST['doctype'];
+        $user = "Administrator";
+        $date = date("Y-m-d");
         // // menyimpan data file kedalam database
-        // $insertdata = mysqli_query($hostptba, "INSERT INTO t_file VALUES(NULL, '$date', '$user', '$fileName','$doc_type' )");
+        $insertdata = mysqli_query($hostptba, "INSERT INTO t_file VALUES(NULL, '$date', '$user', '$fileName','$doc_type' )");
         // // redirecting ke halaman utama upload
-        // header("Location: ../pages/upload/manualbook.php?status_upload=berhasil");
-        echo $doc_type;
+        if($doc_type == 'Manual Book'){
+            header("Location: ../pages/upload/manualbook.php?status_upload=berhasil");
+        } else if($doc_type == 'Nota Dinas'){
+            header("Location: ../pages/upload/notadinas.php?status_upload=berhasil");
+        } else if($doc_type == 'Single Line Diagram'){
+            header("Location: ../pages/upload/singlelinediagram.php?status_upload=berhasil");
+        } else if($doc_type == 'Berita Acara Kejadian'){
+            header("Location: ../pages/upload/bak.php?status_upload=berhasil");
+        }
+        
+
     }
 }
 ?>

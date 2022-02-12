@@ -1,15 +1,7 @@
 // const tawal = document.getElementById('tawal').value;
 // const takhir = document.getElementById('takhir').value;
-const uploadForm = document.querySelector(".boxFormUpload");
-const cancel = document.querySelector(".cancelUploadBtn");
-cancel.addEventListener('click', function(){
-  uploadForm.style.display="none";
-});
-const sideUpload = document.getElementById("upload");
-sideUpload.addEventListener('click', function(){
-  const uploadForm = document.querySelector(".boxFormUpload");
-  uploadForm.style.display="block";
-})
+
+
 
 // Menghitung durasi problem 
 function getDurasi(){

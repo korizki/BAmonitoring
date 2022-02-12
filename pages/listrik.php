@@ -117,10 +117,10 @@
         <h1 class='top-title'>Other Information's</h1>
         <div class='graph-box' style='text-align: center' >
           <div class="flex" style="flex-direction: column; gap: 25px; align-items: center; margin-top: 25px; ">
-            <a href='#singleline' onClick='showSingleLine()' class='btnother'>Single Line Diagram</a>
-            <a href='#singleline' onClick='showSingleLine()' class='btnother'>Manual Book</a>
-            <a href='#singleline' onClick='showSingleLine()' class='btnother'>Berita Acara Kejadian</a>
-            <a href='#singleline' onClick='showSingleLine()' class='btnother'>Nota Dinas</a>
+            <a href='upload/singlelinediagram.php' target="_blank" class='btnother'>Single Line Diagram</a>
+            <a href='upload/manualbook.php' target="_blank" class='btnother'>Manual Book</a>
+            <a href='upload/bak.php' target="_blank" class='btnother'>Berita Acara Kejadian</a>
+            <a href='upload/notadinas.php' target="_blank" class='btnother'>Nota Dinas</a>
           </div>
         </div>
       </div>
