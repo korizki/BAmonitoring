@@ -310,3 +310,147 @@ header p{
 .filterMenu ul li a:hover{
     background-color: #cacaca6e;
 }
+/* Upload Page */
+.uploadPage{
+    background-color: rgb(233, 233, 236) !important;
+    height: 400px;
+    padding: 30px 80px;
+}
+.upHeader{
+    display: flex;
+    padding: 20px 80px;
+    width: 100%;
+    background: rgb(20, 20, 100);
+    border-radius: 20px;
+    height: 340px;
+    border: 1px solid grey;
+    justify-content: space-between;
+    gap: 30px;
+}
+.upHeader figure{
+    height: 300px;
+}
+.upHeader figure img{
+    height: 100%;
+    width: auto;
+}
+.upHeader .textHeader{
+    flex: 1;
+}
+.textHeader h1{
+    letter-spacing: 3px;
+}
+.textHeader p{
+    text-align: justify;
+    line-height: 1.6;
+    font-weight: 300;
+}
+.listButtons{
+    margin-block-start: 20px;
+}
+.listButtons a{
+    display: inline-block;
+    padding: 12px 25px;
+    background: white;
+    border-radius: 6px;
+    margin-inline-end: 20px;
+    color: rgb(20, 20, 100);
+}
+.listButtons a:hover{
+    box-shadow: 0px 0px 10px 0 rgb(153, 163, 255);
+}
+.contentTitle{
+    display: flex;
+   
+    justify-content: space-between;
+}
+.contentTitle h1{
+    font-size: 2.5rem;
+    color: rgb(20, 20, 100);
+    font-weight: 600;
+}
+.uploadContent{
+    margin: 20px 0;
+}
+.rightBtn button{
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    background:rgb(20, 20, 100);
+    color: white;
+    cursor: pointer;
+}
+#uploadContent article{
+    padding: 20px 5%;
+}
+.uploadContent table{
+    margin-block-start: 30px;
+    font-size: 14px;
+    border-collapse: collapse;
+    width: 100%;
+}
+.uploadContent table tr th{
+    border: 1px solid rgb(20, 20, 100);
+    font-size: 1.3em;
+    font-weight: 400;
+    background: rgb(28, 28, 85);
+    padding: 14px 0;
+    color: white;
+}
+.uploadContent table tr{
+    border: 1px solid rgba(128, 128, 128, 0.301);
+}
+.uploadContent table tr td{
+    font-size: 1em;
+    text-align: center;
+    padding: 13px;
+    color: grey;
+}
+.uploadContent table tr:nth-child(even){
+    background: rgba(148, 148, 255, 0.150);
+}
+.boxFormUpload{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.534);
+}
+.boxform{
+    margin: 10% 30%;
+    width: 40%;
+    min-width: 500px;
+    background: white;
+    border-radius: 20px;
+    height: 320px;
+    padding: 30px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cancelUploadBtn{
+    text-align:center;
+    margin-block-start: 10px;
+    display: block;
+}
+.boxFormUpload{
+    display: none;
+}
+.boxform h1{
+    font-size: 2rem;
+    color: rgb(20, 20, 100);
+    font-weight: 600;
+    padding-block-end: 10px;
+    margin-block-end: 15px;
+    border-bottom: 5px solid rgb(20, 20, 100);
+}
+.upSubmit{
+    background:rgb(20, 20, 100);
+    color: white;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 6px;
+    margin-block-start: 10px;
+}
