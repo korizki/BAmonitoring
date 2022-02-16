@@ -54,7 +54,6 @@
               $total_halaman = ceil($jumlah_data / $batas);
 
               $data = mysqli_query($hostptba, "select * from T_HALANGAN order by START desc limit $halaman_awal, $batas ");
-
               
               // Eksekusi Sort Data
               if(isset($_POST['load'] )){
@@ -103,15 +102,15 @@
         <!-- Panel Pages Bar -->
         <div>
           <div class='pageNumber'>
-            <li> <a <?php if($halaman > 1){echo "href='?halaman=$previous'";} ?>><i class="fa fa-angle-left" style="margin: 0"> </i></a></li>
+            <li> <a <?php if($halaman > 1){echo "href='?content=problem&halaman=$previous'";} ?>><i class="fa fa-angle-left" style="margin: 0"> </i></a></li>
             <?php 
               for ($x=1; $x <= $total_halaman; $x++){
                 ?>
-                  <li><a href = "?halaman=<?php echo $x ?>"><?php echo $x?></a></li>
+                  <li><a href = "?content=problem&halaman=<?php echo $x ?>"><?php echo $x?></a></li>
                 <?php
               }
             ?>
-            <li><a <?php if ($halaman < $total_halaman){ echo "href='?halaman=$next'"; }?>><i class="fa fa-angle-right" style="margin: 0"></i></a></li>
+            <li><a <?php if ($halaman < $total_halaman){ echo "href='?content=problem&halaman=$next'"; }?>><i class="fa fa-angle-right" style="margin: 0"></i></a></li>
           </div>
         </div>
     </div>

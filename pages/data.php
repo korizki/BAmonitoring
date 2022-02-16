@@ -118,6 +118,28 @@
           case 'unit' : 
             include "unit/dataUnit.php";
             break;
+          case 'unitedit' : 
+            include "unit/dataUnit.php";
+            echo "
+            <script>
+              setTimeout(function(){
+                const notif = document.querySelector('.notifact');
+                notif.style.top = '-60px';
+              },2500)
+            </script>
+            <span class='notifact ngreen'>Update data berhasil.</span>";
+            break;
+          case 'unitdelete' : 
+            include "unit/dataUnit.php";
+            echo "
+            <script>
+              setTimeout(function(){
+                const notif = document.querySelector('.notifact');
+                notif.style.top = '-60px';
+              },2500)
+            </script>
+            <span class='notifact nred'>Data telah dihapus.</span>";
+            break;  
           default:
             echo "<center>Maaf, Halaman tidak ditemukan! </center>";
             break;
