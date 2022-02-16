@@ -28,7 +28,7 @@
         <div class='edit-box' id='outer-edit'>
           <div class='form-input'>
             <form action='edit.php' method='post'>
-              <h2 class='title' style='margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(67, 96, 106, 0.20);'>Edit Problem </h2> 
+              <h2 class='title' style='margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(67, 96, 106, 0.20); font-weight: 600'>Edit Problem </h2> 
               
               <div class='flex' style='gap: 10px;'>
               <input type='hidden' name='id' id='id' value="<?php echo $dataedit['ID']?>" >

@@ -69,7 +69,7 @@
           <a href="data.php?content=summary" class='sideMenu' ><i class="fa fa-lg fa-chart-bar" ></i>Summary</a>
           <a href="data.php?content=problem" class='sideMenu' ><i class="fa fa-lg fa-exclamation-circle" ></i>Problem</a>
           <a href="data.php?content=unit" class='sideMenu'><i class="fa fa-lg fa-charging-station"></i>Unit</a>
-          <a href="#title" class='sideMenu'><i class="fa fa-lg fa-ruler-combined"></i>Cable Usage</a>
+          <a href="data.php?content=kabel" class='sideMenu'><i class="fa fa-lg fa-ruler-combined"></i>Cable Usage</a>
         </div>
     </aside>
     <div class='dMainContent' style="padding-top: 20px;">
@@ -139,7 +139,32 @@
               },2500)
             </script>
             <span class='notifact nred'>Data telah dihapus.</span>";
-            break;  
+            break;
+          case 'kabel' : 
+            include "kabel/dataKabel.php";
+            break;
+          case 'kabeledit' : 
+            include "kabel/dataKabel.php";
+            echo "
+            <script>
+              setTimeout(function(){
+                const notif = document.querySelector('.notifact');
+                notif.style.top = '-60px';
+              },2500)
+            </script>
+            <span class='notifact ngreen'>Update data berhasil.</span>";
+            break;
+          case 'kabeldelete' : 
+            include "kabel/dataKabel.php";
+            echo "
+            <script>
+              setTimeout(function(){
+                const notif = document.querySelector('.notifact');
+                notif.style.top = '-60px';
+              },2500)
+            </script>
+            <span class='notifact nred'>Data telah dihapus.</span>";
+            break;
           default:
             echo "<center>Maaf, Halaman tidak ditemukan! </center>";
             break;

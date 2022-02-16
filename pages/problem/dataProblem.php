@@ -59,15 +59,15 @@
               if(isset($_POST['load'] )){
                 $sorts = $_POST['sort']; 
                 if ($sorts == "unit"){
-                  $data = mysqli_query($hostptba, "select * from T_HALANGAN order by UNIT asc");
+                  $data = mysqli_query($hostptba, "select * from T_HALANGAN order by UNIT asc limit $halaman_awal, $batas");
                 } else if ($sorts == "location"){
-                  $data = mysqli_query($hostptba, "select * from T_HALANGAN order by LOKASI asc");
+                  $data = mysqli_query($hostptba, "select * from T_HALANGAN order by LOKASI asc limit $halaman_awal, $batas");
                 } else if ($sorts == "group"){
-                  $data = mysqli_query($hostptba, "select * from T_HALANGAN order by GRUP asc");
+                  $data = mysqli_query($hostptba, "select * from T_HALANGAN order by GRUP asc limit $halaman_awal, $batas");
                 } else if ($sorts == "duration"){
-                  $data = mysqli_query($hostptba, "select * from T_HALANGAN order by TOTAL desc");
+                  $data = mysqli_query($hostptba, "select * from T_HALANGAN order by TOTAL desc limit $halaman_awal, $batas");
                 } else {
-                  $data = mysqli_query($hostptba, "select * from T_HALANGAN");
+                  $data = mysqli_query($hostptba, "select * from T_HALANGAN limit $halaman_awal, $batas");
                 }  
               }
 

@@ -39,5 +39,24 @@
 			echo "Data Gagal Disimpan";
 		}
 	}
+	// simpan data kabel
+	if(isset($_POST['simpan_kabel'])){
+		$id_kabel = $_POST['id_kabel'];
+		$shovel = $_POST['SHOVEL'];
+		$kabel = $_POST['KABEL'];
+		$panjang = $_POST['PANJANG'];
+		$queryedit = mysqli_query($hostptba, "update T_KABEL set
+		SHOVEL = '$shovel',
+		KABEL = '$kabel',
+		PANJANG = '$panjang' 
+		where ID ='$id_kabel'
+		");
+		if($queryedit){
+			header("location: ../pages/data.php?content=kabeledit");
+		} else {
+			echo "Data Gagal Disimpan";
+		}
+	}
+	
 
 ?>

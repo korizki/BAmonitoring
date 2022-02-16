@@ -25,10 +25,10 @@
       $query_mysql = mysqli_query($hostptba, "select * from T_UNIT where id = '$id'");
       while ($dataedit = mysqli_fetch_array($query_mysql)){
       ?>
-        <div class='edit-box' id='outer-edit'>
+        <div class='edit-box addunit' id='outer-edit'>
           <div class='form-input'>
             <form action='edit.php' method='post'>
-              <h2 class='title' style='margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(67, 96, 106, 0.20);'>Edit Unit </h2> 
+              <h2 class='title' style='margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(67, 96, 106, 0.20); font-weight: 600;'>Edit Data Unit </h2> 
               <div class='flex' style='gap: 10px; flex-direction: column'>
                 <input type='hidden' name='id_unit' id='id' value="<?php echo $dataedit['ID']?>" >
                 <div>
@@ -66,7 +66,7 @@
                     <input type='submit' class='submit' value='Submit' name='simpan_unit'>
                 </div>
             </form>
-            <button class='cancel'  onClick='window.location = "../pages/data.php?"'>Cancel</button>
+            <a class='cancel'  style="text-align: center; margin-top: 0;" href="../pages/data.php?content=unit">Cancel</a>
           </div>
         </div> <?php
       }

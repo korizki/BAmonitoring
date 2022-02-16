@@ -5,16 +5,16 @@
           <div>
             Search Unit  <input type="text" name="fieldcari" id="cari" class="searchInput"><a href="#" class="searchbtn"><i class="fa fa-search" style="margin-left: 6px"></i></a>
           </div>
-          <div>
-            <a href="#" class='searchbtn' style="padding: 10px 15px;" onClick="showFilterMenu()"> Filter By <i class="fa fa-filter"></i></a>
-            <div class="filterMenu">
-              <ul>
-                <li><a href="#">Unit Name</a></li>
-                <li><a href="#">Location</a></li>
-                <li><a href="#">Condition</a></li>
-                <li><a href="#">Lane</a></li>
-              </ul>
-            </div>
+          <div style="margin-right: 10px;">
+            <form action="" method="post" name="sortUnit">
+              <select name="sortUnits" id="sortProblem" style="margin-top: 0;" class="btnfilter" onChange="sortProblemData()">
+                <option value="" disabled selected>Sort By <span class="fa fa-filter"></span></option>
+                <option value="name" >Unit Name (A-Z)</option>
+                <option value="location" >Location (A-Z)</option>
+                <option value="condition" >Condition (A-Z)</option>
+              </select>
+              <input id="load" type="submit" name="load" value="Load Data" style="display: none";>
+            </form>
           </div>
           <div>
             <a class='add-button' onClick='showForm()'> <i class='fa fa-plus'></i>Add Unit</a>
@@ -47,12 +47,27 @@
               $total_halaman = ceil($jumlah_data / $batas);
 
               $data = mysqli_query($hostptba, "select * from T_UNIT order by NAMA_UNIT asc limit $halaman_awal, $batas ");
+
+              // Eksekusi Sort Data
+              if(isset($_POST['load'] )){
+                $sorts = $_POST['sortUnits']; 
+                if ($sorts == "name"){
+                  $data = mysqli_query($hostptba, "select * from T_UNIT order by NAMA_UNIT asc limit $halaman_awal, $batas ");
+                } else if ($sorts == "location"){
+                  $data = mysqli_query($hostptba, "select * from T_UNIT order by LOKASI asc limit $halaman_awal, $batas ");
+                } else if ($sorts == "condition"){
+                  $data = mysqli_query($hostptba, "select * from T_UNIT order by KONDISI asc limit $halaman_awal, $batas ");
+                } else {
+                  $data = mysqli_query($hostptba, "select * from T_UNIT limit $halaman_awal, $batas");
+                }  
+              }
+
               $nomor = $halaman_awal + 1;
 
               while ($tabel = mysqli_fetch_array($data)){
                   ?>
                   <tr>
-                    <td><?php echo $no++; ?></td>
+                    <td><?php echo $nomor++; ?></td>
                     <td><?php echo $tabel['NAMA_UNIT'] ?></td>
                     <td><?php echo $tabel['LOKASI'] ?></td>
                     <td><?php echo $tabel['KONDISI'] ?></td>

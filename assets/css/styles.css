@@ -260,7 +260,7 @@
     box-shadow: 0px 0px 10px 0 #F05454;
   }
   .blues:hover{
-    box-shadow: 5px 5px 15px 0 #0f20274f
+    box-shadow: 0px 0px 10px 0 #0f20274f
   }
   .redkabel{
     background: rgb(253, 37, 37) !important;
@@ -340,7 +340,7 @@
     background: #30475E;
     color: white;
     border: 1px solid #30475E; 
-    box-shadow: 5px 5px 15px 0 #30475e52;
+    box-shadow: 0px 0px 10px 0 #30475e52;
   }
   .listMonth:focus{
     outline: none;
@@ -383,7 +383,7 @@
     cursor: pointer;
   }
   .periodeButton .btnsubmit:hover{
-    box-shadow: 0 0 5px 0 #30475E;
+    box-shadow: 0 0 10px 0 #30475E;
   }
   .periodeButton figure{
     display: flex;
@@ -733,6 +733,10 @@
     border-radius: 7px;
     background: #30475e;
     color: white;
+  }
+  .addunit .form-input{
+    min-height: 560px;
+    height: 560px;
   }
   
 
