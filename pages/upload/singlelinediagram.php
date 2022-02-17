@@ -39,6 +39,21 @@
         </div>
     </header>
     <article>
+        <div class="contentTitle" style="display: block">
+        <?php 
+        include "../../phpcode/connection.php";
+
+        $query = mysqli_query($hostptba, "SELECT * FROM  t_file WHERE DOC_TYPE = 'Single Line Diagram' ORDER BY ID DESC LIMIT 1");
+        $row_image = mysqli_fetch_array($query);
+        
+        ?>
+            <h1>Latest Single Line Document</h1>
+            <figure class='sld-pics'>
+                <img src="../../assets/uploaded/<?php echo $row_image['FILE_NAME']?>" alt="latest-sld">
+            </figure>
+        </div>
+    </article>
+    <article>
         <div class="contentTitle">
             <h1>List Of Document's</h1>
             <div class="rightBtn">

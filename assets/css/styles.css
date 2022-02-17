@@ -738,6 +738,20 @@
     min-height: 560px;
     height: 560px;
   }
+  .sld-pics{
+    width: 100%;
+    margin-block-start: 20px;
+    border-radius: 15px;
+    padding: 15px;
+    border: 1px solid white;
+    box-shadow: 0 0 20px 0 rgba(128, 128, 128, 0.301);
+  }
+  .sld-pics img{
+    width: inherit;
+    border-radius: 15px;
+    
+  }
+
   
 
   @media screen and (min-width: 1580px){

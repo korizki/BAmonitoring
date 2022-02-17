@@ -122,7 +122,7 @@
             while ($tabel = mysqli_fetch_array($data)){
                 ?>
                 <tr>
-                  <td><?php echo $no++; ?>
+                  <td><?php echo $nomor++; ?>
                   <td><?php echo $tabel['POWER'] ?></td>
                   <td class='hide'><?php echo $tabel['UNIT'] ?></td>
                   <td><?php echo $tabel['LOKASI'] ?></td>
@@ -140,15 +140,15 @@
       </table>
       <nav>
         <ul class='pageNumber'>
-          <li> <a class='pageact' <?php if($halaman > 1){echo "href='?halaman=$previous'";} ?>><i class="fa fa-angle-left" style="margin-right: 0;"></i></a></li>
+          <li> <a class='pageact' <?php if($halaman > 1){echo "href='?tawal=$tawal&takhir=$takhir&filterdata=Show+Detail+Problem&halaman=$previous'";} ?>><i class="fa fa-angle-left" style="margin-right: 0;"></i></a></li>
           <?php 
             for ($x=1; $x <= $total_halaman; $x++){
               ?>
-                <li><a class='pageact' href = "?halaman=<?php echo $x ?>"><?php echo $x?></a></li>
+                <li><a class='pageact' href = "?tawal=<?php echo $tawal?>&takhir=<?php echo $takhir?>&filterdata=Show+Detail+Problem&halaman=<?php echo $x ?>"><?php echo $x?></a></li>
               <?php
             }
           ?>
-          <li><a class='pageact' <?php if ($halaman < $total_halaman){ echo "href='?halaman=$next'"; }?>><i class="fa fa-angle-right" style="margin-right: 0;"></i></a></li>
+          <li><a class='pageact' <?php if ($halaman < $total_halaman){ echo "href=?tawal=$tawal&takhir=$takhir&filterdata=Show+Detail+Problem&halaman=$next'"; }?>><i class="fa fa-angle-right" style="margin-right: 0;"></i></a></li>
         </ul>
       </nav>
     </div>

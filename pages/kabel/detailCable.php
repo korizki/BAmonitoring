@@ -99,7 +99,7 @@
           while ($t_kabel = mysqli_fetch_array($datakabel)){
             ?>
             <tr>
-              <td><?php echo $nokabel++; ?></td>
+              <td><?php echo $nohal++; ?></td>
               <td><?php echo $t_kabel['SHOVEL']?></td>
               <td><?php echo $t_kabel['KABEL']?></td>
               <td><?php echo $t_kabel['PANJANG']?></td>
