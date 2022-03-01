@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Sep 28, 2021 at 05:57 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.33
+-- Host: 127.0.0.1
+-- Generation Time: Mar 01, 2022 at 12:47 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.0.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,10 +24,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `T_HALANGAN`
+-- Table structure for table `t_file`
 --
 
-CREATE TABLE `T_HALANGAN` (
+CREATE TABLE `t_file` (
+  `ID` int(11) NOT NULL,
+  `DATE` date NOT NULL,
+  `USER` varchar(100) NOT NULL,
+  `FILE_NAME` varchar(100) NOT NULL,
+  `DOC_TYPE` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `t_halangan`
+--
+
+CREATE TABLE `t_halangan` (
   `ID` int(4) NOT NULL,
   `POWER` text NOT NULL,
   `UNIT` text NOT NULL,
@@ -41,10 +55,10 @@ CREATE TABLE `T_HALANGAN` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `T_HALANGAN`
+-- Dumping data for table `t_halangan`
 --
 
-INSERT INTO `T_HALANGAN` (`ID`, `POWER`, `UNIT`, `LOKASI`, `GRUP`, `START`, `END`, `TOTAL`, `PROBLEM`, `ACTION_PROBLEM`) VALUES
+INSERT INTO `t_halangan` (`ID`, `POWER`, `UNIT`, `LOKASI`, `GRUP`, `START`, `END`, `TOTAL`, `PROBLEM`, `ACTION_PROBLEM`) VALUES
 (24, '6 KV', 'CRU PIT-3', 'PIT-2', 'B', '2021-09-01 20:46:00', '2021-09-01 21:52:00', '1.10', 'Kabel Terlindas Dozer', 'Perbaikan Kabel'),
 (25, '20 KV', 'CRU PIT-3', 'PIT-3', 'A', '2021-09-01 20:47:00', '2021-09-01 23:47:00', '3.00', 'Rawatan SSU ', 'Pengerjaan Penggantian Spare Part SSU'),
 (26, '20 KV', 'CRU PIT-3', 'PIT-3', 'D', '2021-09-01 20:48:00', '2021-09-01 23:48:00', '3.00', 'Pengecekkan Kabel 20KV', 'Pengecekkan Hingga Kondisi Aman'),
@@ -58,10 +72,10 @@ INSERT INTO `T_HALANGAN` (`ID`, `POWER`, `UNIT`, `LOKASI`, `GRUP`, `START`, `END
 -- --------------------------------------------------------
 
 --
--- Table structure for table `T_KABEL`
+-- Table structure for table `t_kabel`
 --
 
-CREATE TABLE `T_KABEL` (
+CREATE TABLE `t_kabel` (
   `ID` int(11) NOT NULL,
   `SHOVEL` text NOT NULL,
   `KABEL` text NOT NULL,
@@ -69,10 +83,10 @@ CREATE TABLE `T_KABEL` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `T_KABEL`
+-- Dumping data for table `t_kabel`
 --
 
-INSERT INTO `T_KABEL` (`ID`, `SHOVEL`, `KABEL`, `PANJANG`) VALUES
+INSERT INTO `t_kabel` (`ID`, `SHOVEL`, `KABEL`, `PANJANG`) VALUES
 (1, 'SE-3001', 'Kabel 3 x 35mm2', 350),
 (2, 'SE-3001', 'Kabel 3 x 70mm2', 550),
 (3, 'SE-3002', 'Kabel 3 x 70mm2', 200),
@@ -88,10 +102,10 @@ INSERT INTO `T_KABEL` (`ID`, `SHOVEL`, `KABEL`, `PANJANG`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `T_UNIT`
+-- Table structure for table `t_unit`
 --
 
-CREATE TABLE `T_UNIT` (
+CREATE TABLE `t_unit` (
   `ID` int(11) NOT NULL,
   `NAMA_UNIT` text NOT NULL,
   `LOKASI` text NOT NULL,
@@ -100,10 +114,10 @@ CREATE TABLE `T_UNIT` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `T_UNIT`
+-- Dumping data for table `t_unit`
 --
 
-INSERT INTO `T_UNIT` (`ID`, `NAMA_UNIT`, `LOKASI`, `KONDISI`, `JALUR`) VALUES
+INSERT INTO `t_unit` (`ID`, `NAMA_UNIT`, `LOKASI`, `KONDISI`, `JALUR`) VALUES
 (1, 'CRU 01', 'PIT 3 Utara, Banko Barat', 'Ready', 'SE-3006'),
 (2, 'CRU 02', 'PIT 3 Selatan, Banko Barat', 'Ready', 'SE-3004'),
 (3, 'CRU 03', 'PIT 3 Selatan, Banko Barat', 'Ready', 'SE-3005'),
@@ -121,26 +135,57 @@ INSERT INTO `T_UNIT` (`ID`, `NAMA_UNIT`, `LOKASI`, `KONDISI`, `JALUR`) VALUES
 (15, 'TSU 06', 'Pit 2, Banko Barat', 'Ready', 'SE 3002'),
 (16, 'TSU 07', 'Pit 2, Banko Barat', 'Ready', 'SE 3001 & SE 3003');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `t_user`
+--
+
+CREATE TABLE `t_user` (
+  `ID` int(11) NOT NULL,
+  `USERNAME` varchar(50) NOT NULL,
+  `PASSWORD` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `t_user`
+--
+
+INSERT INTO `t_user` (`ID`, `USERNAME`, `PASSWORD`) VALUES
+(1, 'admin', 'admin');
+
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `T_HALANGAN`
+-- Indexes for table `t_file`
 --
-ALTER TABLE `T_HALANGAN`
+ALTER TABLE `t_file`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `T_KABEL`
+-- Indexes for table `t_halangan`
 --
-ALTER TABLE `T_KABEL`
+ALTER TABLE `t_halangan`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `T_UNIT`
+-- Indexes for table `t_kabel`
 --
-ALTER TABLE `T_UNIT`
+ALTER TABLE `t_kabel`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `t_unit`
+--
+ALTER TABLE `t_unit`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `t_user`
+--
+ALTER TABLE `t_user`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -148,22 +193,34 @@ ALTER TABLE `T_UNIT`
 --
 
 --
--- AUTO_INCREMENT for table `T_HALANGAN`
+-- AUTO_INCREMENT for table `t_file`
 --
-ALTER TABLE `T_HALANGAN`
+ALTER TABLE `t_file`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `t_halangan`
+--
+ALTER TABLE `t_halangan`
   MODIFY `ID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
--- AUTO_INCREMENT for table `T_KABEL`
+-- AUTO_INCREMENT for table `t_kabel`
 --
-ALTER TABLE `T_KABEL`
+ALTER TABLE `t_kabel`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT for table `T_UNIT`
+-- AUTO_INCREMENT for table `t_unit`
 --
-ALTER TABLE `T_UNIT`
+ALTER TABLE `t_unit`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `t_user`
+--
+ALTER TABLE `t_user`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
