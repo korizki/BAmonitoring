@@ -18,6 +18,8 @@ if(isset($_POST["upload"])){
             echo "File ".htmlspecialchars(basename($_FILES["uploadBtn"]["name"]))." has been uploaded.";
         }
         // // ambil nama file
+        $fileName = "";
+        $doc_type = "";
         $fileName = $_FILES["uploadBtn"]["name"];
         $doc_type = $_POST['doctype'];
         $user = "Administrator";

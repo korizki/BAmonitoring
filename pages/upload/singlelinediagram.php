@@ -99,7 +99,7 @@
             <form class="form" action="../../phpcode/upload.php" method="post" enctype="multipart/form-data">
             <label for="namadokumen">Info: This is type of Document you'll upload :</label>
                 <select id="doctype" name="doctype" >
-                    <option value="Single Line Diagram" selected disabled>Single Line Diagram</option>
+                    <option value="Single Line Diagram" selected>Single Line Diagram</option>
                 </select>
                 <input id="uploadBtn" name="uploadBtn" type="file" accept="application/pdf" onChange="getName()">
                 <input class="upSubmit" type="submit" value="Submit" name="upload">

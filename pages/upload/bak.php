@@ -84,7 +84,7 @@
             <form class="form" action="../../phpcode/upload.php" method="post" enctype="multipart/form-data">
                 <label for="namadokumen">Info: This is type of Document you'll upload :</label>
                 <select id="doctype" name="doctype" >
-                    <option value="Berita Acara Kejadian" selected disabled>Berita Acara Kejadian</option>
+                    <option value="Berita Acara Kejadian" selected >Berita Acara Kejadian</option>
                 </select>
                 <input id="uploadBtn" name="uploadBtn" type="file" accept="application/pdf" onChange="getName()">
                 <input class="upSubmit" type="submit" value="Submit" name="upload">
